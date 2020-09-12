@@ -8,7 +8,7 @@ if (getAppToken() !== null) {
     getAppToken(),
     function (res) {
       if (res.success === true) {
-        window.location.href = '/admin.html';
+        window.location.href = '/utils.html';
       } else {
         redirectToLogin();
       }
@@ -41,7 +41,7 @@ $('#login-button').click(function (event) {
       function (res) {
         if (res.success === true) {
           setAppToken(token);
-          window.location.href = '/admin.html';
+          window.location.href = '/utils.html';
         } else if (res.error === true && res.errortype === 'auth') {
           alert('Sai mật khẩu!');
           redirectToLogin();
